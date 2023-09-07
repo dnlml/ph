@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('$lib/assets/fonts/PPNeueMontreal-Thin.woff2');
+    font-weight: 100;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('$lib/assets/fonts/PPNeueMontreal-Regular.woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('$lib/assets/fonts/PPNeueMontreal-Bold.woff2');
+    font-weight: 800;
+    font-display: swap;
+  }
+
+  /* Avoid Chrome to see Safari hack */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      /* Fix vh issue on Safari */
+      height: -webkit-fill-available;
+    }
+  }
+
+  html,
+  body {
+    -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
+    -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
+    color: #1c1c1c;
+    font-family: 'Neue Montreal', sans-serif;
+  }
+}
+
+@layer components {
+  h1 {
+    font-weight: 800;
+  }
+}
