@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@studio-freight/lenis':
+    specifier: ^1.0.24
+    version: 1.0.24
   '@zerodevx/svelte-img':
     specifier: ^2.0.3
     version: 2.0.3(svelte@4.2.0)
@@ -427,6 +430,10 @@ packages:
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
+
+  /@studio-freight/lenis@1.0.24:
+    resolution: {integrity: sha512-lOd+vy62k/ekOEU0PLXjHIpobVKBYeBEiy0T3x6MrvgG5ohbP3+iVRZAUAdw94Sv2jk6AgowwJqifB9pC/qc9Q==}
+    dev: false
 
   /@sveltejs/adapter-auto@2.1.0(@sveltejs/kit@1.24.0):
     resolution: {integrity: sha512-o2pZCfATFtA/Gw/BB0Xm7k4EYaekXxaPGER3xGSY3FvzFJGTlJlZjBseaXwYSM94lZ0HniOjTokN3cWaLX6fow==}
