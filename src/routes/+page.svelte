@@ -97,7 +97,19 @@
         alt="One tree and a nice yellow"
         meta={['[12]', 'null', '2018', '41.40291926855, 2.1288699428661']}
         aspect="1/1"
-        loading="eager"
+        imageClasses="md:col-start-2 md:col-end-5"
+        metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
+        projectUrl="./hi"
+      />
+    </div>
+    <div
+      class="lg:grid grid-cols-4 gap-3 lg:gap-6 col-start-1 col-end-6 md:col-start-2 mb-12 lg:mb-52"
+    >
+      <PreviewImage
+        src={adrian}
+        alt="One tree and a nice yellow"
+        meta={['[12]', 'spares', '2018-2022', '41.40291926855, 2.1288699428661']}
+        aspect="6196/5061"
         imageClasses="md:col-start-2 md:col-end-5"
         metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
         projectUrl="./hi"

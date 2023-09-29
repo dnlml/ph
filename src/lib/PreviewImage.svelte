@@ -26,7 +26,7 @@
 
 {#if isTitleVisible}
   <div
-    class="fixed inset-0 flex items-center justify-center text-6xl uppercase z-40 pointer-events-none serif"
+    class="fixed inset-0 hidden md:flex items-center justify-center text-6xl uppercase z-40 pointer-events-none serif"
   >
     <div class="overflow-hidden px-3">
       <div
@@ -48,7 +48,7 @@
     on:mouseenter={onMouseEnter}
     on:mouseleave={onMouseOut}
   >
-    <Img class="h-full w-full" {src} factor={0.91} {alt} {loading} />
+    <Img class="h-full w-full hue" {src} factor={0.91} {alt} {loading} />
   </a>
 </div>
 
@@ -59,3 +59,13 @@
     {/each}
   {/if}
 </div>
+
+<style>
+  :global(.hue picture) {
+    transition: filter 0.9s;
+  }
+
+  :global(.hue:hover picture) {
+    filter: hue-rotate(90deg);
+  }
+</style>
