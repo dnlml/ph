@@ -25,6 +25,13 @@
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'Editorial Old';
+    src: url('$lib/assets/fonts/PPEditorialOld-Italic.woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+
   /* Avoid Chrome to see Safari hack */
   @supports (-webkit-touch-callout: none) {
     body {
@@ -59,6 +66,10 @@
 
   .lenis.lenis-scrolling iframe {
     pointer-events: none;
+  }
+
+  .serif {
+    font-family: 'Editorial Old', serif;
   }
 }
 

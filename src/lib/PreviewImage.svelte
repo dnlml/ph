@@ -25,10 +25,12 @@
 </script>
 
 {#if isTitleVisible}
-  <div class="fixed inset-0 flex items-center justify-center text-8xl z-40 pointer-events-none">
-    <div class="overflow-hidden">
+  <div
+    class="fixed inset-0 flex items-center justify-center text-6xl uppercase z-40 pointer-events-none serif"
+  >
+    <div class="overflow-hidden px-3">
       <div
-        class="translate-y-full mb-9"
+        class="translate-y-full my-9"
         in:customTransitionIn={{ duration: 900 }}
         out:customTransitionOut={{ duration: 400 }}
       >
@@ -46,7 +48,7 @@
     on:mouseenter={onMouseEnter}
     on:mouseleave={onMouseOut}
   >
-    <Img class="h-full w-full" {src} factor={0.95} {alt} {loading} />
+    <Img class="h-full w-full" {src} factor={0.91} {alt} {loading} />
   </a>
 </div>
 
