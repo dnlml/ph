@@ -39,3 +39,19 @@ export function customTransitionOut(node: HTMLElement, params: TransitionConfig)
     }
   };
 }
+
+export function opacityIn(node: HTMLElement, params: TransitionConfig): TransitionConfig {
+  return {
+    duration: params.duration || 300,
+    css: (t: number) => {
+      const eased = easeOutExpo(t) * 0.5;
+
+      return `background-color: rgba(255,255,255, ${eased});`;
+    },
+    tick: (t: number, u: number) => {
+      if (u === 0) {
+        node.style.backgroundColor = 'rgba(255,255,255, 0.5)';
+      }
+    }
+  };
+}

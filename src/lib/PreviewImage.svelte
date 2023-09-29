@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { decreaseBodyOpacity } from '$lib/store';
   import { customTransitionIn, customTransitionOut } from './customTransition';
   import { FxParallax as Img } from '@zerodevx/svelte-img';
 
@@ -17,10 +18,12 @@
 
   const onMouseEnter = () => {
     isTitleVisible = true;
+    decreaseBodyOpacity.set(isTitleVisible);
   };
 
   const onMouseOut = () => {
     isTitleVisible = false;
+    decreaseBodyOpacity.set(isTitleVisible);
   };
 </script>
 
