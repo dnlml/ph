@@ -25,7 +25,7 @@
 </script>
 
 {#if isTitleVisible}
-  <div class="fixed inset-0 flex items-center justify-center text-8xl">
+  <div class="fixed inset-0 flex items-center justify-center text-8xl z-40 pointer-events-none">
     <div class="overflow-hidden">
       <div
         class="translate-y-full mb-9"
