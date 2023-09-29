@@ -69,6 +69,6 @@
   }
 
   :global(.hue:hover picture) {
-    filter: hue-rotate(90deg);
+    filter: grayscale(100%) brightness(1.5);
   }
 </style>
