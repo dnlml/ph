@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { decreaseBodyOpacity } from '$lib/store';
-  import { customTransitionIn, customTransitionOut } from './customTransition';
+  import { showingTitle } from '$lib/store';
   import { FxParallax as Img } from '@zerodevx/svelte-img';
 
   export let src: any;
@@ -14,34 +13,14 @@
 
   export let loading: 'eager' | 'lazy' = 'lazy';
 
-  let isTitleVisible = false;
-
   const onMouseEnter = () => {
-    isTitleVisible = true;
-    decreaseBodyOpacity.set(isTitleVisible);
+    showingTitle.set(meta[1]);
   };
 
   const onMouseOut = () => {
-    isTitleVisible = false;
-    decreaseBodyOpacity.set(isTitleVisible);
+    showingTitle.set('');
   };
 </script>
-
-{#if isTitleVisible}
-  <div
-    class="fixed inset-0 hidden md:flex items-center justify-center text-6xl uppercase z-40 pointer-events-none serif"
-  >
-    <div class="overflow-hidden px-3">
-      <div
-        class="translate-y-full my-9"
-        in:customTransitionIn={{ duration: 900 }}
-        out:customTransitionOut={{ duration: 400 }}
-      >
-        {meta[1]}
-      </div>
-    </div>
-  </div>
-{/if}
 
 <div class={imageClasses}>
   <a
@@ -50,6 +29,7 @@
     style={`aspect-ratio: ${aspect}`}
     on:mouseenter={onMouseEnter}
     on:mouseleave={onMouseOut}
+    on:click={onMouseOut}
   >
     <Img class="h-full w-full hue" {src} factor={0.91} {alt} {loading} />
   </a>
@@ -69,6 +49,6 @@
   }
 
   :global(.hue:hover picture) {
-    filter: grayscale(100%) brightness(1.5);
+    filter: grayscale(100%) brightness(1.1);
   }
 </style>

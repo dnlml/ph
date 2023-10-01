@@ -29,7 +29,7 @@
         loading="eager"
         imageClasses="md:col-start-2 md:col-end-5"
         metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
-        projectUrl="./hi"
+        projectUrl="./null"
       />
     </div>
     <div
@@ -37,7 +37,7 @@
     >
       <PreviewImage
         src={crepes}
-        alt=""
+        alt="Goffres et Crêpes"
         meta={[
           '[37]',
           'humans were here',
@@ -56,7 +56,7 @@
     >
       <PreviewImage
         src={twelve}
-        alt=""
+        alt="Magazzino Merci"
         meta={[
           '[12]',
           "Agosto '94",
@@ -75,7 +75,7 @@
     >
       <PreviewImage
         src={fourtySeleven}
-        alt=""
+        alt="Left Blue"
         meta={[
           '[37]',
           'humans were here',
@@ -94,7 +94,7 @@
     >
       <PreviewImage
         src={yellow}
-        alt="One tree and a nice yellow"
+        alt="A yellow box on the beach"
         meta={['[12]', 'null', '2018', '41.40291926855, 2.1288699428661']}
         aspect="1/1"
         imageClasses="md:col-start-2 md:col-end-5"
@@ -107,8 +107,8 @@
     >
       <PreviewImage
         src={adrian}
-        alt="One tree and a nice yellow"
-        meta={['[12]', 'spares', '2018-2022', '41.40291926855, 2.1288699428661']}
+        alt="Adrian"
+        meta={['[12]', 'libere', '2018-2022', '41.40291926855, 2.1288699428661']}
         aspect="6196/5061"
         imageClasses="md:col-start-2 md:col-end-5"
         metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
