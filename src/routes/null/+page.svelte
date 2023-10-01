@@ -4,8 +4,6 @@
   import metaTree from '$lib/assets/images/tree.jpg?as=meta';
   import yellow from '$lib/assets/images/yellow.jpg?as=run';
   import metaYellow from '$lib/assets/images/yellow.jpg?as=meta';
-
-  console.log(metaTree);
 </script>
 
 <section class="wrapper flex flex-col items-center justify-center">
