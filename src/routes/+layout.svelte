@@ -4,9 +4,12 @@
   import Lenis from '@studio-freight/lenis';
   import { onMount } from 'svelte';
   import { showingTitle } from '$lib/store';
+  import { page } from '$app/stores';
+  import { browser } from '$app/environment';
 
+  let lenis: Lenis;
   onMount(() => {
-    let lenis = new Lenis();
+    lenis = new Lenis();
 
     function raf(time: number) {
       lenis.raf(time);
@@ -19,6 +22,10 @@
       cancelAnimationFrame(rafId);
     };
   });
+
+  $: if (browser && $page.status && lenis) {
+    lenis.scrollTo(0, { immediate: true });
+  }
 </script>
 
 {#if $showingTitle !== ''}
