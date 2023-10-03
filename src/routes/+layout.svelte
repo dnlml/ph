@@ -1,13 +1,22 @@
 <script lang="ts">
   import '../app.css';
-  import { customTransitionIn, customTransitionOut } from '$lib/customTransition';
   import Lenis from '@studio-freight/lenis';
   import { onMount } from 'svelte';
   import { showingTitle } from '$lib/store';
   import { page } from '$app/stores';
   import { browser } from '$app/environment';
+  import { onNavigate, beforeNavigate, goto, afterNavigate } from '$app/navigation';
+  import PreviewTitle from '$lib/PreviewTitle.svelte';
+  import Courtain from '$lib/Courtain.svelte';
+  import Header from '$lib/Header.svelte';
 
   let lenis: Lenis;
+
+  let curtainAppears = false;
+  let curtainDisappears = false;
+  let shouldGo = true;
+
+  const duration = 5000;
   onMount(() => {
     lenis = new Lenis();
 
@@ -26,37 +35,40 @@
   $: if (browser && $page.status && lenis) {
     lenis.scrollTo(0, { immediate: true });
   }
-</script>
 
-{#if $showingTitle !== ''}
-  <div
-    class="fixed inset-0 hidden md:flex items-center justify-center text-6xl uppercase z-40 pointer-events-none serif"
-  >
-    <div class="overflow-hidden px-3">
-      <div
-        class="translate-y-full my-9"
-        in:customTransitionIn={{ duration: 900 }}
-        out:customTransitionOut={{ duration: 400 }}
-      >
-        {$showingTitle}
-      </div>
-    </div>
-  </div>
-{/if}
+  beforeNavigate(({ to, from, cancel }) => {
+    if (shouldGo && from?.route.id !== to?.route.id) {
+      console.log('before');
+      curtainAppears = true;
+
+      cancel();
+      setTimeout(() => {
+        shouldGo = false;
+        goto(to?.route.id || '/');
+      }, duration / 2);
+    }
+  });
+
+  afterNavigate(() => {
+    console.log('after');
+    shouldGo = true;
+    curtainAppears = false;
+  });
+</script>
 
 <main
   class="px-3 lg:px-6 transition-opacity relative"
   style={`--op: ${$showingTitle !== '' ? 0.5 : 0}`}
 >
-  <nav class="h-16 md:h-28 sticky top-0 z-10 mix-blend-difference">
-    <div class="flex justify-between items-center h-full">
-      <h1 class="text-xl">
-        <a href="/">Daniele Meli</a>
-      </h1>
-      <a href="/about">about</a>
-    </div>
-  </nav>
-  <slot />
+  <Courtain {duration} {curtainAppears} />
+
+  <PreviewTitle />
+
+  <Header />
+
+  <section class="mt-16 md:mt-28">
+    <slot />
+  </section>
 </main>
 
 <style>
