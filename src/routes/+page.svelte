@@ -10,7 +10,7 @@
 </script>
 
 <div class="relative mt-12">
-  <section class="md:absolute md:z-10 mb-12">
+  <section class="md:absolute mb-12">
     <div>37 y/o italian photographer</div>
     <div>barcelona based</div>
     <div>hi@danielemeli.com</div>
