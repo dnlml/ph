@@ -77,4 +77,12 @@
   h1 {
     font-weight: 800;
   }
+
+  .wrapper {
+    margin: 0 auto;
+    padding: 60px 120px;
+    height: 100dvh;
+    max-width: 100%;
+  }
+
 }

@@ -25,13 +25,6 @@
 </div>
 
 <style>
-  .wrapper {
-    margin: 0 auto;
-    padding: 60px;
-    height: 100dvh;
-    max-width: 100%;
-  }
-
   h1 {
     transform: translateY(-50%);
   }
