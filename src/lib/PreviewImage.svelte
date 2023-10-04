@@ -1,6 +1,6 @@
 <script lang="ts">
   import { showingTitle } from '$lib/store';
-  import { FxParallax as Img } from '@zerodevx/svelte-img';
+  import Img from '@zerodevx/svelte-img';
 
   export let src: any;
   export let alt: string;
@@ -24,14 +24,14 @@
 
 <div class={imageClasses}>
   <a
-    class="block mix-blend-color"
+    class="block hue"
     href={projectUrl}
     style={`aspect-ratio: ${aspect}`}
     on:mouseenter={onMouseEnter}
     on:mouseleave={onMouseOut}
     on:click={onMouseOut}
   >
-    <Img class="h-full w-full hue" {src} factor={0.91} {alt} {loading} />
+    <Img class="h-full w-full" {src} factor={0.91} {alt} {loading} />
   </a>
 </div>
 
@@ -44,11 +44,11 @@
 </div>
 
 <style>
-  :global(.hue picture) {
+  :global(.hue img) {
     transition: filter 0.9s;
   }
 
-  :global(.hue:hover picture) {
+  :global(.hue:hover img) {
     filter: grayscale(100%) brightness(1.1);
   }
 </style>

@@ -11,7 +11,7 @@
       <div
         class="translate-y-full my-9"
         in:customTransitionIn={{ duration: 900 }}
-        out:customTransitionOut={{ duration: 400 }}
+        out:customTransitionOut={{ duration: 300 }}
       >
         {$showingTitle}
       </div>

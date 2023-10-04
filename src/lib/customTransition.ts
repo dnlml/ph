@@ -1,28 +1,7 @@
 import type { TransitionConfig } from 'svelte/transition';
 
 function easeOutExpo(x: number): number {
-  if (x < 0.5) {
-    return 0.5 * Math.pow(2, 20 * x - 10);
-  } else {
-    return 1 - 0.5 * Math.pow(2, -20 * x + 10);
-  }
-}
-
-function easeInOutExpoPlateau(x: number): number {
-  const plateau = 0.2; // 20% plateau
-  const ease = 0.4; // 40% ease in, 40% ease out
-
-  if (x < ease) {
-    // Ease in phase
-    return 0.5 * Math.pow(2, (20 * x) / ease - 10);
-  } else if (x < ease + plateau) {
-    // Plateau phase
-    return 1;
-  } else {
-    // Ease out phase
-    const adjustedX = (x - ease - plateau) / ease;
-    return 1 - 0.5 * Math.pow(2, -20 * adjustedX + 10);
-  }
+  return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
 }
 
 export function customTransitionIn(node: HTMLElement, params: TransitionConfig): TransitionConfig {
@@ -63,9 +42,27 @@ export function customTransitionOut(node: HTMLElement, params: TransitionConfig)
 
 export function courtainDown(node: HTMLElement, params: TransitionConfig): TransitionConfig {
   return {
-    duration: params.duration || 300,
+    duration: params.duration,
+    delay: params.delay || 0,
     css: (t: number) => {
-      const eased = easeOutExpo(t) * 200 - 100;
+      const eased = easeOutExpo(t) * 100 - 100;
+
+      return `transform: translateY(${eased}%)`;
+    },
+    tick(t, u) {
+      if (u === 0) {
+        node.style.transform = 'translateY(0%)';
+      }
+    }
+  };
+}
+
+export function courtainUp(node: HTMLElement, params: TransitionConfig): TransitionConfig {
+  return {
+    duration: params.duration,
+    delay: params.delay || 0,
+    css: (t: number) => {
+      const eased = (1 - easeOutExpo(t)) * 100;
 
       return `transform: translateY(${eased}%)`;
     }

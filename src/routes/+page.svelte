@@ -48,7 +48,7 @@
         aspect="3420/2216"
         imageClasses="md:col-start-1 md:col-end-3"
         metaClasses="pt-2 md:col-span-1 md:flex flex-col md:items-start md:justify-end"
-        projectUrl="./hi"
+        projectUrl="./hwh"
       />
     </div>
     <div
@@ -67,7 +67,7 @@
         aspect="2000/1610"
         imageClasses="image md:col-start-2 md:col-end-3"
         metaClasses="meta pt-2 md:col-start-1 md:col-end-2 row-start-1 md:flex flex-col md:items-end md:justify-end"
-        projectUrl="./hi"
+        projectUrl="./agosto94"
       />
     </div>
     <div
@@ -86,7 +86,7 @@
         aspect="2195/3319"
         imageClasses="image md:col-start-2 md:col-end-3"
         metaClasses="meta pt-2 md:col-start-1 md:col-end-2 row-start-1 md:flex flex-col md:items-end md:justify-end"
-        projectUrl="./hi"
+        projectUrl="./hwh"
       />
     </div>
     <div
@@ -99,7 +99,7 @@
         aspect="1/1"
         imageClasses="md:col-start-2 md:col-end-5"
         metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
-        projectUrl="./hi"
+        projectUrl="./null"
       />
     </div>
     <div
@@ -112,7 +112,7 @@
         aspect="6196/5061"
         imageClasses="md:col-start-2 md:col-end-5"
         metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
-        projectUrl="./hi"
+        projectUrl="./libere"
       />
     </div>
   </section>
