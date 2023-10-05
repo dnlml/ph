@@ -7,14 +7,13 @@
   import { browser } from '$app/environment';
   import PreviewTitle from '$lib/PreviewTitle.svelte';
   import Courtain from '$lib/Courtain.svelte';
-  import Header from '$lib/Header.svelte';
+  import Nav from '$lib/Nav.svelte';
   import { onNavigate } from '$app/navigation';
   import Footer from '$lib/Footer.svelte';
 
   let lenis: Lenis;
 
   let curtainAppears = false;
-
   const duration = 800;
   const delay = 300;
 
@@ -37,7 +36,11 @@
     lenis.scrollTo(0, { immediate: true });
   }
 
-  onNavigate(() => {
+  onNavigate(({ from, to }) => {
+    if (from?.route?.id === to?.route?.id) {
+      return;
+    }
+
     curtainAppears = true;
 
     return new Promise((resolve) => {
@@ -57,7 +60,7 @@
 
   <PreviewTitle />
 
-  <Header />
+  <Nav />
 
   <section class="mt-16 md:mt-28">
     <slot />
