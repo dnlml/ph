@@ -1,10 +1,10 @@
 <script>
-  import yellow from '$lib/assets/images/yellow.jpg?as=run';
-  import crepes from '$lib/assets/images/crepes.jpg?as=run';
-  import adrian from '$lib/assets/images/adrian.jpg?as=run';
-  import twelve from '$lib/assets/images/12.png?as=run';
-  import tree from '$lib/assets/images/tree.jpg?as=run';
-  import fourtySeleven from '$lib/assets/images/47.jpg?as=run';
+  import yellow from '$lib/assets/images/null/yellow.jpg?as=run';
+  import eleven from '$lib/assets/images/hwh/11.jpg?as=run';
+  import adrian from '$lib/assets/images/libere/adrian.jpg?as=run';
+  import twelve from '$lib/assets/images/agosto94/12.jpg?as=run';
+  import tree from '$lib/assets/images/null/tree.jpg?as=run';
+  import thirthyFour from '$lib/assets/images/hwh/34.jpg?as=run';
 
   import PreviewImage from '$lib/PreviewImage.svelte';
 </script>
@@ -36,7 +36,7 @@
       class="lg:grid grid-cols-3 gap-3 lg:gap-6 col-start-1 col-end-6 md:col-end-4 mb-12 lg:mb-52"
     >
       <PreviewImage
-        src={crepes}
+        src={eleven}
         alt="Goffres et Crêpes"
         meta={[
           '[37]',
@@ -74,7 +74,7 @@
       class="lg:grid grid-cols-2 gap-3 lg:gap-6 col-start-1 col-end-6 md:col-start-3 md:col-end-5 mb-12 lg:mb-52 auto-rows-min"
     >
       <PreviewImage
-        src={fourtySeleven}
+        src={thirthyFour}
         alt="Left Blue"
         meta={[
           '[37]',

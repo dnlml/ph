@@ -38,6 +38,6 @@
   "type": "module",
   "dependencies": {
     "@studio-freight/lenis": "^1.0.24",
-    "@zerodevx/svelte-img": "^2.0.3"
+    "@zerodevx/svelte-img": "^2.1.0"
   }
 }
