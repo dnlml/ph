@@ -1,33 +1,79 @@
+<script lang="ts">
+  import { page } from '$app/stores';
+</script>
+
 <div class="text-center mb-8 mt-40 lg:mt-0 lg:mb-64 relative z-20">
   You've reached the bottom of this page. Feel free to explore
   <span class="relative">
     <span>my portfolio</span>
     <ul class="hidden lg:block absolute top-20 left-0 text-left w-max">
-      <li><a href="/hwh">Humans were here <sub>[37]</sub></a></li>
-      <li><a href="/agosto94">Agosto '94 <sub>[12]</sub></a></li>
-      <li><a href="/null">null <sub>[12]</sub></a></li>
-      <li><a href="/libere">libere <sub>[12]</sub></a></li>
+      <li>
+        <a href="/hwh" class:font-bold={$page.url.pathname === '/hwh'}>
+          Humans were here <sub class="font-normal">[37]</sub>
+        </a>
+      </li>
+      <li>
+        <a href="/agosto94" class:font-bold={$page.url.pathname === '/agosto94'}>
+          Agosto '94 <sub class="font-normal">[12]</sub>
+        </a>
+      </li>
+      <li>
+        <a href="/null" class:font-bold={$page.url.pathname === '/null'}>
+          null<sub class="font-normal">[12]</sub>
+        </a>
+      </li>
+      <li>
+        <a href="/libere" class:font-bold={$page.url.pathname === '/libere'}>
+          libere <sub class="font-normal">[12]</sub>
+        </a>
+      </li>
     </ul>
   </span>, return to the
   <span class="relative">
     <span>homepage</span>
-    <a class="hidden lg:block absolute top-20 left-0 text-left w-max" href="/">homepage</a>
+    <a
+      class="hidden lg:block absolute top-20 left-0 text-left w-max"
+      class:font-bold={$page.url.pathname === '/'}
+      href="/"
+    >
+      homepage
+    </a>
   </span>, or learn a bit more
   <span class="relative">
     <span>about</span>
-    <a class="hidden lg:block absolute top-20 left-0 text-left w-max" href="/about">about</a>
+    <a
+      class="hidden lg:block absolute top-20 left-0 text-left w-max"
+      class:font-bold={$page.url.pathname === '/about'}
+      href="/about">about</a
+    >
   </span>
   me.
 </div>
 
 <div class="lg:hidden text-center">
   <ul class="mb-6">
-    <li><a href="/hwh">Humans were here <sub>[37]</sub></a></li>
-    <li><a href="/agosto94">Agosto '94 <sub>[12]</sub></a></li>
-    <li><a href="/null">null <sub>[12]</sub></a></li>
-    <li><a href="/libere">libere <sub>[12]</sub></a></li>
+    <li>
+      <a href="/hwh" class:font-bold={$page.url.pathname === '/hwh'}>
+        Humans were here <sub class="font-normal">[37]</sub>
+      </a>
+    </li>
+    <li>
+      <a href="/agosto94" class:font-bold={$page.url.pathname === '/agosto94'}>
+        Agosto '94 <sub class="font-normal">[12]</sub>
+      </a>
+    </li>
+    <li>
+      <a href="/null" class:font-bold={$page.url.pathname === '/null'}>
+        null <sub class="font-normal">[12]</sub>
+      </a>
+    </li>
+    <li>
+      <a href="/libere" class:font-bold={$page.url.pathname === '/libere'}>
+        libere <sub class="font-normal">[12]</sub>
+      </a>
+    </li>
   </ul>
 
-  <a class="block mb-6" href="/">homepage</a>
-  <a class="block mb-12" href="/about">about</a>
+  <a class="block mb-6" href="/" class:font-bold={$page.url.pathname === '/'}>homepage</a>
+  <a class="block mb-12" href="/about" class:font-bold={$page.url.pathname === '/about'}>about</a>
 </div>
