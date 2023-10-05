@@ -78,9 +78,9 @@
   <div class="row-start-2">
     <h1 class="serif text-6xl uppercase font-light text-center">Agosto '94</h1>
     <p class="mx-auto max-w-md">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ullam facere voluptates ipsa
-      modi eaque unde asperiores deserunt, praesentium mollitia sit inventore molestias. Numquam
-      praesentium maiores minima vero sequi. Nesciunt?
+      Quelle estati le passavo dai nonni, lontano dai miei genitori. Potevo sentirli una volta al
+      giorno, dopo le 22 quando le interurbane costavano di meno. Mi accompagnavano, mio fratello,
+      le mie cugine, il gameboy e tutti gli attori di una classica estate anni '90 al sud Italia.
     </p>
   </div>
 </section>
