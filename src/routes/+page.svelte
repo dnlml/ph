@@ -1,9 +1,9 @@
 <script>
-  import yellow from '$lib/assets/images/null/yellow.jpg?as=run';
+  import yellow from '$lib/assets/images/null/03.jpg?as=run';
   import eleven from '$lib/assets/images/hwh/11.jpg?as=run';
   import adrian from '$lib/assets/images/libere/adrian.jpg?as=run';
   import twelve from '$lib/assets/images/agosto94/12.jpg?as=run';
-  import tree from '$lib/assets/images/null/tree.jpg?as=run';
+  import tree from '$lib/assets/images/null/10.jpg?as=run';
   import thirthyFour from '$lib/assets/images/hwh/34.jpg?as=run';
 
   import PreviewImage from '$lib/PreviewImage.svelte';

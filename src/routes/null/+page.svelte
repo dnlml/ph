@@ -20,11 +20,7 @@
 <section class="grid grid-rows-2 h-[100dvh] -mt-28">
   <div class="row-start-2">
     <h1 class="serif text-6xl uppercase font-light text-center">null</h1>
-    <p class="mx-auto max-w-md">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ullam facere voluptates ipsa
-      modi eaque unde asperiores deserunt, praesentium mollitia sit inventore molestias. Numquam
-      praesentium maiores minima vero sequi. Nesciunt?
-    </p>
+    <p class="mx-auto max-w-md text-center">Nothing less, nothing more</p>
   </div>
 </section>
 
