@@ -38,6 +38,7 @@
   "type": "module",
   "dependencies": {
     "@studio-freight/lenis": "^1.0.24",
+    "@vercel/analytics": "^1.1.0",
     "@zerodevx/svelte-img": "^2.1.0"
   }
 }
