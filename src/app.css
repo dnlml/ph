@@ -80,9 +80,13 @@
 
   .wrapper {
     margin: 0 auto;
-    padding: 60px 120px;
     height: 100dvh;
     max-width: 100%;
   }
 
+  @media (min-width: 1024px) {
+    .wrapper {
+      padding: 60px 120px;
+    }
+  }
 }
