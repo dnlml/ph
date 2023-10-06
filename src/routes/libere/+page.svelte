@@ -17,7 +17,7 @@
   const aspect = Object.entries(metas).map((i) => i[1]) as { width: number; height: number }[];
 </script>
 
-<section class="grid grid-rows-2 h-[90dvh] -mt-28">
+<section class="grid grid-rows-2 h-[90dvh] -mt-2 md:-mt-28">
   <div class="row-start-2">
     <h1 class="serif text-6xl uppercase font-light text-center">Libere</h1>
   </div>
@@ -26,7 +26,8 @@
 {#each srcs as src, i}
   <div
     class="wrapper"
-    class:-mt-8={i === 0}
+    class:-mt-2={i === 0}
+    class:md:-mt-8={i === 0}
     style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}
   >
     <Img {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />

@@ -74,7 +74,7 @@
   ];
 </script>
 
-<section class="grid grid-rows-2 h-[90dvh] -mt-28">
+<section class="grid grid-rows-2 h-[90dvh] -mt-2 md:-mt-28">
   <div class="row-start-2">
     <h1 class="serif text-6xl uppercase font-light text-center">Agosto '94</h1>
     <p class="mx-auto max-w-md">
