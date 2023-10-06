@@ -17,7 +17,7 @@
   const aspect = Object.entries(metas).map((i) => i[1]) as { width: number; height: number }[];
 </script>
 
-<section class="grid grid-rows-2 h-[100dvh] -mt-28">
+<section class="grid grid-rows-2 h-[90dvh] -mt-28">
   <div class="row-start-2">
     <h1 class="serif text-6xl uppercase font-light text-center">Libere</h1>
   </div>
