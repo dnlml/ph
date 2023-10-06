@@ -70,17 +70,19 @@
 </main>
 
 <style>
-  main::before {
-    content: '';
-    position: absolute;
-    transition: opacity 0.5s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    opacity: var(--op);
-    z-index: 1;
-    pointer-events: none;
+  @media (min-width: 1024px) {
+    main::before {
+      content: '';
+      position: absolute;
+      transition: opacity 0.5s;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      opacity: var(--op);
+      z-index: 1;
+      pointer-events: none;
+    }
   }
 </style>

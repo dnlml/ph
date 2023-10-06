@@ -48,7 +48,9 @@
     transition: filter 0.9s;
   }
 
-  :global(.hue:hover img) {
-    filter: grayscale(100%) brightness(1.1);
+  @media (min-width: 1024px) {
+    :global(.hue:hover img) {
+      filter: grayscale(100%) brightness(1.1);
+    }
   }
 </style>
