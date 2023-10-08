@@ -51,29 +51,45 @@
 </div>
 
 <div class="lg:hidden text-center">
-  <ul class="mb-6">
+  <ul class="mb-12">
     <li>
-      <a href="/hwh" class:font-bold={$page.url.pathname === '/hwh'}>
+      <a
+        class="block leading-10 lg:leading-4"
+        href="/hwh"
+        class:font-bold={$page.url.pathname === '/hwh'}
+      >
         Humans were here <sub class="font-normal">[37]</sub>
       </a>
     </li>
     <li>
-      <a href="/agosto94" class:font-bold={$page.url.pathname === '/agosto94'}>
+      <a
+        class="block leading-10 lg:leading-4"
+        href="/agosto94"
+        class:font-bold={$page.url.pathname === '/agosto94'}
+      >
         Agosto '94 <sub class="font-normal">[12]</sub>
       </a>
     </li>
     <li>
-      <a href="/null" class:font-bold={$page.url.pathname === '/null'}>
+      <a
+        class="block leading-10 lg:leading-4"
+        href="/null"
+        class:font-bold={$page.url.pathname === '/null'}
+      >
         null <sub class="font-normal">[12]</sub>
       </a>
     </li>
     <li>
-      <a href="/libere" class:font-bold={$page.url.pathname === '/libere'}>
+      <a
+        class="block leading-10 lg:leading-4"
+        href="/libere"
+        class:font-bold={$page.url.pathname === '/libere'}
+      >
         libere <sub class="font-normal">[12]</sub>
       </a>
     </li>
   </ul>
 
-  <a class="block mb-6" href="/" class:font-bold={$page.url.pathname === '/'}>homepage</a>
+  <a class="block mb-12" href="/" class:font-bold={$page.url.pathname === '/'}>homepage</a>
   <a class="block mb-12" href="/about" class:font-bold={$page.url.pathname === '/about'}>about</a>
 </div>
