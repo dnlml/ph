@@ -14,8 +14,8 @@
   // let lenis: Lenis;
 
   let curtainAppears = false;
-  const duration = 800;
-  const delay = 300;
+  const duration = 500;
+  const delay = 180;
 
   // onMount(() => {
   //   // lenis = new Lenis();
