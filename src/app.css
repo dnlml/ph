@@ -79,14 +79,14 @@
   }
 
   .wrapper {
-    margin: 0 auto;
-    height: 100dvh;
+    margin: 60px auto;
     max-width: 100%;
   }
 
   @media (min-width: 1024px) {
     .wrapper {
       padding: 60px 120px;
+      margin: 120px auto;
     }
   }
 }

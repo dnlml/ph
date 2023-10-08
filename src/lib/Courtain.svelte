@@ -24,22 +24,26 @@
 
 {#if curtainAppears}
   <div
-    class={`bg-[${colors[0]}] fixed inset-0 z-30 -translate-y-full will-change-transform`}
+    style={`background-color: ${colors[0]}`}
+    class={`fixed inset-0 z-30 -translate-y-full will-change-transform`}
     in:courtainDown={{ duration }}
     out:courtainUp={{ duration, delay }}
   />
   <div
-    class={`bg-[${colors[1]}] fixed inset-0 z-30 -translate-y-full will-change-transform`}
+    style={`background-color: ${colors[1]}`}
+    class={`fixed inset-0 z-30 -translate-y-full will-change-transform`}
     in:courtainDown={{ duration, delay: delay - factor * 3 }}
     out:courtainUp={{ duration, delay: delay - factor }}
   />
   <div
-    class={`bg-[${colors[2]}] fixed inset-0 z-30 -translate-y-full will-change-transform`}
+    style={`background-color: ${colors[2]}`}
+    class={`fixed inset-0 z-30 -translate-y-full will-change-transform`}
     in:courtainDown={{ duration, delay: delay - factor * 2 }}
     out:courtainUp={{ duration, delay: delay - factor * 2 }}
   />
   <div
-    class={`bg-[${colors[3]}] fixed inset-0 z-30 -translate-y-full will-change-transform`}
+    style={`background-color: ${colors[3]}`}
+    class={`fixed inset-0 z-30 -translate-y-full will-change-transform`}
     in:courtainDown={{ duration, delay: delay - factor }}
     out:courtainUp={{ duration, delay: delay - factor * 3 }}
   />
