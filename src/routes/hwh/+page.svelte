@@ -17,10 +17,10 @@
   const aspect = Object.entries(metas).map((i) => i[1]) as { width: number; height: number }[];
 </script>
 
-<section class="grid grid-rows-2 min-h-[90dvh] -mt-2 md:-mt-28 mb-10">
+<section class="grid grid-rows-2 h-[100dvh] md:-mt-28 mb-20">
   <div class="row-start-2">
     <h1 class="serif text-6xl uppercase font-light text-center">humans were here</h1>
-    <p class="mx-auto max-w-md">
+    <p class="mx-auto max-w-md mb-10">
       Flowers, buildings, food, plastic. A collection of traces that humans left in the artificial
       context they built over the years. Signs created in the present can suddenly become part of
       the past, where they represent things that no longer exist. <br />Nothing is written to last
@@ -35,15 +35,17 @@
   </div>
 </section>
 
-{#each srcs as src, i}
-  <div
-    class="wrapper"
-    class:md:-mt-8={i === 0}
-    style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}
-  >
-    <Img {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
-  </div>
-{/each}
+<div class="-mt-4 md:-mt-28">
+  {#each srcs as src, i}
+    <div
+      class="wrapper"
+      class:md:-mt-8={i === 0}
+      style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}
+    >
+      <Img {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
+    </div>
+  {/each}
+</div>
 
 <style>
   h1 {
