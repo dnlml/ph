@@ -8,7 +8,7 @@
   let projects = [
     {
       route: '/',
-      title: '.'
+      title: ''
     },
     {
       route: '/agosto94',
@@ -25,6 +25,10 @@
     {
       route: '/null',
       title: 'null'
+    },
+    {
+      route: '/about',
+      title: ''
     }
   ];
   $: title = '';
@@ -36,7 +40,7 @@
 
 {#if curtainAppears}
   <div
-    style={`background-color: #1c1c1c`}
+    style={`background-color: ${title === '' ? '#fff' : '#1c1c1c'} `}
     class={`fixed inset-0 z-50 flex items-center justify-center text-6xl uppercase serif text-white text-center`}
     transition:fade={{ duration }}
   >
