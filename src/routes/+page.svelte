@@ -85,9 +85,22 @@
           '51.52022099027464, -0.09356109319664'
         ]}
         aspect="2000/1610"
-        imageClasses="image md:col-start-2 md:col-end-3"
+        imageClasses="image md:col-start-1 md:col-end-3"
         metaClasses="meta pt-2 md:col-start-1 md:col-end-2 row-start-1 md:flex flex-col md:items-end md:justify-end"
         projectUrl="./agosto94"
+      />
+    </div>
+    <div
+      class="lg:grid grid-cols-4 gap-3 lg:gap-6 col-start-1 col-end-6 md:col-start-2 mb-12 lg:mb-52"
+    >
+      <PreviewImage
+        src={adrian}
+        alt="Adrian"
+        meta={['[12]', 'libere', '2018-2022', '41.40291926855, 2.1288699428661']}
+        aspect="6196/5061"
+        imageClasses="md:col-start-2 md:col-end-5"
+        metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
+        projectUrl="./libere"
       />
     </div>
     <div
@@ -110,7 +123,7 @@
       />
     </div>
     <div
-      class="lg:grid grid-cols-4 gap-3 lg:gap-6 col-start-1 col-end-6 md:col-start-1 md:col-end-3 mb-12 lg:mb-52"
+      class="lg:grid grid-cols-4 gap-3 lg:gap-6 col-start-1 col-end-6 md:col-start-1 md:col-end-4 mb-12 lg:mb-52"
     >
       <PreviewImage
         src={yellow}
@@ -120,19 +133,6 @@
         imageClasses="md:col-start-2 md:col-end-5"
         metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
         projectUrl="./null"
-      />
-    </div>
-    <div
-      class="lg:grid grid-cols-4 gap-3 lg:gap-6 col-start-1 col-end-6 md:col-start-2 mb-12 lg:mb-52"
-    >
-      <PreviewImage
-        src={adrian}
-        alt="Adrian"
-        meta={['[12]', 'libere', '2018-2022', '41.40291926855, 2.1288699428661']}
-        aspect="6196/5061"
-        imageClasses="md:col-start-2 md:col-end-5"
-        metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
-        projectUrl="./libere"
       />
     </div>
   </section>

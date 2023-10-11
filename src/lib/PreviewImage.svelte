@@ -13,11 +13,11 @@
 
   export let loading: 'eager' | 'lazy' = 'lazy';
 
-  const onMouseEnter = () => {
+  const setTitle = () => {
     showingTitle.set(meta[1]);
   };
 
-  const onMouseOut = () => {
+  const unsetTitle = () => {
     showingTitle.set('');
   };
 </script>
@@ -27,9 +27,9 @@
     class="block hue"
     href={projectUrl}
     style={`aspect-ratio: ${aspect}`}
-    on:mouseenter={onMouseEnter}
-    on:mouseleave={onMouseOut}
-    on:click={onMouseOut}
+    on:mouseenter={setTitle}
+    on:mouseleave={unsetTitle}
+    on:click={unsetTitle}
   >
     <Img class="h-full w-full" {src} factor={0.91} {alt} {loading} />
   </a>

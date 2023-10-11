@@ -68,3 +68,20 @@ export function courtainUp(node: HTMLElement, params: TransitionConfig): Transit
     }
   };
 }
+
+export function fade(node: HTMLElement, params: TransitionConfig): TransitionConfig {
+  return {
+    duration: params.duration,
+    delay: params.delay || 0,
+    css: (t: number) => {
+      const eased = easeOutExpo(t);
+
+      return `opacity: ${eased}`;
+    },
+    tick(t, u) {
+      if (u === 0) {
+        node.style.opacity = '1';
+      }
+    }
+  };
+}

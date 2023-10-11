@@ -2,7 +2,7 @@
   import '../app.css';
   // import Lenis from '@studio-freight/lenis';
   // import { onMount } from 'svelte';
-  import { showingTitle } from '$lib/store';
+  import { showingTitle, nextPage } from '$lib/store';
   // import { page } from '$app/stores';
   // import { browser } from '$app/environment';
   import PreviewTitle from '$lib/PreviewTitle.svelte';
@@ -17,30 +17,12 @@
   const duration = 500;
   const delay = 180;
 
-  // onMount(() => {
-  //   // lenis = new Lenis();
-
-  //   function raf(time: number) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-
-  //   let rafId = requestAnimationFrame(raf);
-
-  //   return () => {
-  //     cancelAnimationFrame(rafId);
-  //   };
-  // });
-
-  // $: if (browser && $page.status && lenis) {
-  //   lenis.scrollTo(0, { immediate: true });
-  // }
-
   onNavigate(({ from, to }) => {
     if (from?.route?.id === to?.route?.id) {
       return;
     }
 
+    $nextPage = to?.route?.id || '';
     curtainAppears = true;
 
     return new Promise((resolve) => {
@@ -56,13 +38,13 @@
   class="px-3 lg:px-6 transition-opacity relative"
   style={`--op: ${$showingTitle !== '' ? 0.5 : 0}`}
 >
-  <Courtain {duration} {curtainAppears} {delay} />
+  <Courtain {duration} {curtainAppears} />
 
   <PreviewTitle />
 
   <Nav />
 
-  <section class="mt-16 md:mt-28">
+  <section class="md:mt-28">
     <slot />
   </section>
 
