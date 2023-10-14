@@ -41,7 +41,7 @@
 {#if curtainAppears}
   <div
     style={`background-color: ${title === '' ? '#fff' : '#1c1c1c'} `}
-    class={`fixed inset-0 z-50 flex items-center justify-center text-6xl uppercase serif text-white text-center`}
+    class={`fixed inset-0 z-30 flex items-center justify-center text-6xl uppercase serif text-white text-center`}
     transition:fade={{ duration }}
   >
     {title}

@@ -87,11 +87,10 @@
 
 <div class="-mt-4 md:-mt-28">
   {#each srcs as src, i}
-    <div
-      class="wrapper flex flex-col items-center"
-      style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}
-    >
-      <Img class="mb-5" {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
+    <div class="wrapper flex flex-col items-center">
+      <div style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}>
+        <Img class="mb-5" {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
+      </div>
 
       <p>{@html subtitles[i]}</p>
     </div>
