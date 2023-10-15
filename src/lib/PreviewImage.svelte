@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { showingTitle } from '$lib/store';
+  import { showingTitle, loaded } from '$lib/store';
   import Img from '@zerodevx/svelte-img';
+  import { down } from './customTransition';
 
   export let src: any;
   export let alt: string;
@@ -22,7 +23,11 @@
   };
 </script>
 
-<div class={imageClasses}>
+<div class={`${imageClasses} overflow-hidden relative`}>
+  {#if !$loaded}
+    <span class="absolute bg-white inset-0" out:down={{ duration: 1000 }} />
+  {/if}
+
   <a
     class="block hue"
     href={projectUrl}

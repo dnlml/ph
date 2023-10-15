@@ -2,7 +2,7 @@
   import '../app.css';
   // import Lenis from '@studio-freight/lenis';
   // import { onMount } from 'svelte';
-  import { showingTitle, nextPage } from '$lib/store';
+  import { showingTitle, nextPage, loaded } from '$lib/store';
   // import { page } from '$app/stores';
   // import { browser } from '$app/environment';
   import PreviewTitle from '$lib/PreviewTitle.svelte';
@@ -10,11 +10,12 @@
   import Nav from '$lib/Nav.svelte';
   import { onNavigate } from '$app/navigation';
   import Footer from '$lib/Footer.svelte';
+  import { onMount } from 'svelte';
 
   // let lenis: Lenis;
 
   let curtainAppears = false;
-  const duration = 500;
+  const duration = 1000;
   const delay = 180;
 
   onNavigate(({ from, to }) => {
@@ -31,6 +32,10 @@
         curtainAppears = false;
       }, duration + delay);
     });
+  });
+
+  onMount(() => {
+    loaded.set(true);
   });
 </script>
 

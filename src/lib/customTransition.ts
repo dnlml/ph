@@ -1,14 +1,11 @@
 import type { TransitionConfig } from 'svelte/transition';
-
-function easeOutExpo(x: number): number {
-  return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
-}
+import { expoInOut } from 'svelte/easing';
 
 export function customTransitionIn(node: HTMLElement, params: TransitionConfig): TransitionConfig {
   return {
     duration: params.duration || 300,
     css: (t: number) => {
-      const eased = easeOutExpo(t);
+      const eased = expoInOut(t);
       const translation = 100 - eased * 100;
 
       return `opacity: ${eased}; transform: translateY(${translation}%)`;
@@ -26,7 +23,7 @@ export function customTransitionOut(node: HTMLElement, params: TransitionConfig)
   return {
     duration: params.duration || 300,
     css: (t: number) => {
-      const eased = easeOutExpo(t);
+      const eased = expoInOut(t);
       const translation = 100 - eased * 100;
 
       return `opacity: ${eased}; transform: translateY(-${translation}%)`;
@@ -45,7 +42,7 @@ export function courtainDown(node: HTMLElement, params: TransitionConfig): Trans
     duration: params.duration,
     delay: params.delay || 0,
     css: (t: number) => {
-      const eased = easeOutExpo(t) * 100 - 100;
+      const eased = expoInOut(t) * 100 - 100;
 
       return `transform: translateY(${eased}%)`;
     },
@@ -62,7 +59,7 @@ export function courtainUp(node: HTMLElement, params: TransitionConfig): Transit
     duration: params.duration,
     delay: params.delay || 0,
     css: (t: number) => {
-      const eased = (1 - easeOutExpo(t)) * 100;
+      const eased = (1 - expoInOut(t)) * 100;
 
       return `transform: translateY(${eased}%)`;
     }
@@ -74,13 +71,30 @@ export function fade(node: HTMLElement, params: TransitionConfig): TransitionCon
     duration: params.duration,
     delay: params.delay || 0,
     css: (t: number) => {
-      const eased = easeOutExpo(t);
+      const eased = expoInOut(t);
 
       return `opacity: ${eased}`;
     },
     tick(t, u) {
       if (u === 0) {
         node.style.opacity = '1';
+      }
+    }
+  };
+}
+
+export function down(node: HTMLElement, params: TransitionConfig): TransitionConfig {
+  return {
+    duration: params.duration,
+    delay: params.delay || 0,
+    css: (t: number) => {
+      const eased = (1 - expoInOut(t)) * 100;
+
+      return `transform: translateY(${eased}%)`;
+    },
+    tick(t, u) {
+      if (u === 0) {
+        node.style.transform = 'translateY(100%)';
       }
     }
   };
