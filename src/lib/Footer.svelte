@@ -8,24 +8,16 @@
     <span>my portfolio</span>
     <ul class="hidden lg:block absolute top-20 left-0 text-left w-max">
       <li>
-        <a href="/hwh" class:font-bold={$page.url.pathname === '/hwh'}>
-          Humans were here <sub class="font-normal">[37]</sub>
-        </a>
+        <a href="/hwh" class:font-bold={$page.url.pathname === '/hwh'}> Humans were here </a>
       </li>
       <li>
-        <a href="/agosto94" class:font-bold={$page.url.pathname === '/agosto94'}>
-          Agosto '94 <sub class="font-normal">[12]</sub>
-        </a>
+        <a href="/agosto94" class:font-bold={$page.url.pathname === '/agosto94'}> Agosto '94 </a>
       </li>
       <li>
-        <a href="/null" class:font-bold={$page.url.pathname === '/null'}>
-          null<sub class="font-normal">[12]</sub>
-        </a>
+        <a href="/null" class:font-bold={$page.url.pathname === '/null'}> null </a>
       </li>
       <li>
-        <a href="/libere" class:font-bold={$page.url.pathname === '/libere'}>
-          libere <sub class="font-normal">[12]</sub>
-        </a>
+        <a href="/libere" class:font-bold={$page.url.pathname === '/libere'}> libere </a>
       </li>
     </ul>
   </span>, return to the
@@ -58,7 +50,7 @@
         href="/hwh"
         class:font-bold={$page.url.pathname === '/hwh'}
       >
-        Humans were here <sub class="font-normal">[37]</sub>
+        Humans were here
       </a>
     </li>
     <li>
@@ -67,7 +59,7 @@
         href="/agosto94"
         class:font-bold={$page.url.pathname === '/agosto94'}
       >
-        Agosto '94 <sub class="font-normal">[12]</sub>
+        Agosto '94
       </a>
     </li>
     <li>
@@ -76,7 +68,7 @@
         href="/null"
         class:font-bold={$page.url.pathname === '/null'}
       >
-        null <sub class="font-normal">[12]</sub>
+        null
       </a>
     </li>
     <li>
@@ -85,7 +77,7 @@
         href="/libere"
         class:font-bold={$page.url.pathname === '/libere'}
       >
-        libere <sub class="font-normal">[12]</sub>
+        libere
       </a>
     </li>
   </ul>

@@ -7,7 +7,7 @@
   export let alt: string;
   export let aspect: string;
   export let projectUrl: string;
-  export let meta: string[] = [];
+  export let title: string = '';
 
   export let imageClasses: string = '';
   export let metaClasses: string = '';
@@ -15,7 +15,7 @@
   export let loading: 'eager' | 'lazy' = 'lazy';
 
   const setTitle = () => {
-    showingTitle.set(meta[1]);
+    showingTitle.set(title);
   };
 
   const unsetTitle = () => {
@@ -41,10 +41,8 @@
 </div>
 
 <div class={`lg:hidden ${metaClasses}`}>
-  {#if meta.length}
-    {#each meta as line}
-      <div>{line}</div>
-    {/each}
+  {#if title.length}
+    <div>{title}</div>
   {/if}
 </div>
 

@@ -44,7 +44,7 @@
       <PreviewImage
         src={tree}
         alt="One tree and a nice yellow"
-        meta={['[12]', 'null', '2018', '41.40291926855, 2.1288699428661']}
+        title={'null'}
         aspect="1/1"
         loading="eager"
         imageClasses="md:col-start-2 md:col-end-5"
@@ -58,13 +58,7 @@
       <PreviewImage
         src={eleven}
         alt="Goffres et Crêpes"
-        meta={[
-          '[37]',
-          'humans were here',
-          '2018-2019',
-          '41.41790458068, 2.228891770447075',
-          '51.52022099027, -0.09356109319664'
-        ]}
+        title={'humans were here'}
         aspect="3420/2216"
         imageClasses="md:col-start-1 md:col-end-3"
         metaClasses="pt-2 md:col-span-1 md:flex flex-col md:items-start md:justify-end"
@@ -77,13 +71,7 @@
       <PreviewImage
         src={twelve}
         alt="Magazzino Merci"
-        meta={[
-          '[12]',
-          "Agosto '94",
-          '2020',
-          '41.41790458068443, 2.228891770447075',
-          '51.52022099027464, -0.09356109319664'
-        ]}
+        title={"Agosto '94"}
         aspect="2000/1610"
         imageClasses="image md:col-start-1 md:col-end-3"
         metaClasses="meta pt-2 md:col-start-1 md:col-end-2 row-start-1 md:flex flex-col md:items-end md:justify-end"
@@ -96,7 +84,7 @@
       <PreviewImage
         src={adrian}
         alt="Adrian"
-        meta={['[12]', 'libere', '2018-2022', '41.40291926855, 2.1288699428661']}
+        title={'libere'}
         aspect="6196/5061"
         imageClasses="md:col-start-2 md:col-end-5"
         metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
@@ -109,13 +97,7 @@
       <PreviewImage
         src={thirthyFour}
         alt="Left Blue"
-        meta={[
-          '[37]',
-          'humans were here',
-          '2018-2019',
-          '41.41790458068443, 2.228891770447075',
-          '51.52022099027464, -0.09356109319664'
-        ]}
+        title={'humans were here'}
         aspect="2195/3319"
         imageClasses="image md:col-start-2 md:col-end-3"
         metaClasses="meta pt-2 md:col-start-1 md:col-end-2 row-start-1 md:flex flex-col md:items-end md:justify-end"
@@ -128,7 +110,7 @@
       <PreviewImage
         src={yellow}
         alt="A yellow box on the beach"
-        meta={['[12]', 'null', '2018', '41.40291926855, 2.1288699428661']}
+        title={'null'}
         aspect="1/1"
         imageClasses="md:col-start-2 md:col-end-5"
         metaClasses="pt-2 md:row-start-1 md:col-span-1 md:flex flex-col md:items-end md:justify-end"
