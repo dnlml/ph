@@ -1,6 +1,6 @@
 <script lang="ts">
   import { showingTitle, loaded } from '$lib/store';
-  import Img from '@zerodevx/svelte-img';
+  import { FxParallax as Img } from '@zerodevx/svelte-img';
   import { down } from './customTransition';
 
   export let src: any;
@@ -25,7 +25,7 @@
 
 <div class={`${imageClasses} overflow-hidden relative`}>
   {#if !$loaded}
-    <span class="absolute bg-white inset-0" out:down={{ duration: 1000 }} />
+    <span class="absolute bg-white inset-0 z-20" out:down={{ duration: 1000 }} />
   {/if}
 
   <a
