@@ -29,7 +29,8 @@
   {/if}
 
   <a
-    class="block hue"
+    class="block"
+    class:hue={$loaded}
     href={projectUrl}
     style={`aspect-ratio: ${aspect}`}
     on:mouseenter={setTitle}
@@ -47,12 +48,12 @@
 </div>
 
 <style>
-  :global(.hue img) {
-    transition: filter 0.9s;
+  :global(.hue) {
+    transition: all 0.9s;
   }
 
   @media (min-width: 1024px) {
-    :global(.hue:hover img) {
+    :global(.hue:hover) {
       filter: grayscale(100%) brightness(1.1);
     }
   }
