@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Img from '@zerodevx/svelte-img';
+  import { FxParallax as Img } from '@zerodevx/svelte-img';
 
   const images = import.meta.glob('$lib/assets/images/null/*.*', {
     import: 'default',
@@ -24,15 +24,20 @@
   </div>
 </section>
 
-<div class="-mt-4 md:-mt-28">
+<div class="-mt-4 md:-mt-28 grid md:grid-cols-5 gap-5 rows-template">
   {#each srcs as src, i}
     <div
-      class="wrapper"
+      class={`image${i}`}
       class:-mt-2={i === 0}
       class:md:-mt-8={i === 0}
       style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}
     >
-      <Img {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
+      <div class="md:hidden">
+        <Img {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} factor={1} />
+      </div>
+      <div class="hidden md:block">
+        <Img {src} alt="" loading={i <= 1 ? 'eager' : 'lazy'} factor={0.91} />
+      </div>
     </div>
   {/each}
 </div>
@@ -40,5 +45,57 @@
 <style>
   h1 {
     transform: translateY(-50%);
+  }
+
+  @media (min-width: 768px) {
+    .rows-template {
+      grid-template-rows: repeat(15, minmax(66dvh, auto));
+    }
+
+    .image0 {
+      grid-column: 3 / 6;
+    }
+
+    .image1 {
+      grid-row: 1;
+      grid-column: 1 / 2;
+    }
+
+    .image2 {
+      grid-row: 3;
+      grid-column: 1 / 3;
+    }
+
+    .image3 {
+      grid-row: 5;
+      grid-column: 2 / 5;
+    }
+
+    .image4 {
+      grid-row: 7;
+      grid-column: 1 / 4;
+    }
+
+    .image5 {
+      grid-row: 7;
+      grid-column: 5 / 6;
+    }
+
+    .image6 {
+      grid-row: 9;
+      grid-column: 3 / 4;
+    }
+    .image7 {
+      grid-row: 10;
+      grid-column: 3 / 6;
+    }
+    .image8 {
+      grid-row: 12;
+      grid-column: 2 / 5;
+    }
+    .image9 {
+      grid-row: 14;
+      grid-column: 3 / 6;
+    }
   }
 </style>
