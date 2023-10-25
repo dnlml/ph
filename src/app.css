@@ -87,7 +87,10 @@
     .wrapper {
       padding: 60px 120px;
       margin: 0 auto;
-      height: 100dvh;
+    }
+
+    .max-height {
+      max-height: 88dvh;
     }
   }
 }

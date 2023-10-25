@@ -19,7 +19,7 @@
 
 <section class="grid grid-rows-2 min-h-[100dvh] md:-mt-28">
   <div class="row-start-2">
-    <h1 class="serif text-6xl uppercase font-light text-center">null</h1>
+    <h1 class="serif text-6xl uppercase font-light text-center -translate-y-1/2">null</h1>
     <p class="mx-auto max-w-md text-center">Nothing less, nothing more</p>
   </div>
 </section>
@@ -27,7 +27,7 @@
 <div class="-mt-4 md:-mt-28 grid md:grid-cols-5 gap-5 rows-template">
   {#each srcs as src, i}
     <div
-      class={`image${i}`}
+      class={`image${i} max-height`}
       class:-mt-2={i === 0}
       class:md:-mt-8={i === 0}
       style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}
@@ -43,10 +43,6 @@
 </div>
 
 <style>
-  h1 {
-    transform: translateY(-50%);
-  }
-
   @media (min-width: 768px) {
     .rows-template {
       grid-template-rows: repeat(15, minmax(66dvh, auto));
