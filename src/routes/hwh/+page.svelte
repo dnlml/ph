@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { FxParallax as Img } from '@zerodevx/svelte-img';
+  import Img from '@zerodevx/svelte-img';
 
   const images = import.meta.glob('$lib/assets/images/hwh/*.*', {
     import: 'default',
