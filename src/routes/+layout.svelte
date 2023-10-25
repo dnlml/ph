@@ -28,8 +28,8 @@
 
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve();
         curtainAppears = false;
+        resolve();
       }, duration + delay);
     });
   });

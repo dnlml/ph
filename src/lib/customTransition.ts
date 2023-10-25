@@ -75,7 +75,7 @@ export function fade(node: HTMLElement, params: TransitionConfig): TransitionCon
 
       return `opacity: ${eased}`;
     },
-    tick(t, u) {
+    tick(_, u) {
       if (u === 0) {
         node.style.opacity = '1';
       }
@@ -92,7 +92,7 @@ export function down(node: HTMLElement, params: TransitionConfig): TransitionCon
 
       return `transform: translateY(${eased}%)`;
     },
-    tick(t, u) {
+    tick(_, u) {
       if (u === 0) {
         node.style.transform = 'translateY(100%)';
       }

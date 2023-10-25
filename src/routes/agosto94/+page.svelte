@@ -22,7 +22,7 @@
     Le pieghe dell'asfalto fanno vibrare i sedili di pelle della FIAT 127
     sulla quale noi bambini ci squagliamo.`,
 
-    `Andiamo al mare con la Zia che ci racconta di Polifemo e di Ulisse
+    `Andiamo al mare con la Zia che ci racconta di Polifemo e di Ulisse <br />
     mentre noi piccoli mangiamo grissini al sesamo.<br />
     E ci spiega dei faraglioni.<br />
     A me piacciono tanto i Ciclopi.`,
@@ -76,7 +76,7 @@
 
 <section class="grid grid-rows-2 min-h-[100dvh] md:-mt-28">
   <div class="row-start-2">
-    <h1 class="serif text-6xl uppercase font-light text-center">Agosto '94</h1>
+    <h1 class="serif text-6xl uppercase font-light text-center -translate-y-1/2">Agosto '94</h1>
     <p class="mx-auto max-w-md">
       Quelle estati le passavo dai nonni, lontano dai miei genitori. Potevo sentirli una volta al
       giorno, dopo le 22 quando le interurbane costavano di meno. Mi accompagnavano, mio fratello,
@@ -87,19 +87,19 @@
 
 <div class="-mt-4 md:-mt-28">
   {#each srcs as src, i}
-    <div class="wrapper flex flex-col items-center">
-      <div style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}>
+    <div class="wrapper flex flex-col items-center min-h-screen">
+      <div class="max" style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}>
         <Img class="mb-5" {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
       </div>
 
-      <p>{@html subtitles[i]}</p>
+      <p class="mt-3">{@html subtitles[i]}</p>
     </div>
   {/each}
 </div>
 <div class="mb-60" />
 
 <style>
-  h1 {
-    transform: translateY(-50%);
+  .max {
+    max-height: 75dvh;
   }
 </style>
