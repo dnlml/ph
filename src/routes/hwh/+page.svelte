@@ -46,12 +46,7 @@
       class:md:mt-0={i === 0}
       style={`aspect-ratio: ${aspect[i].width / aspect[i].height}`}
     >
-      <div class="md:hidden">
-        <Img {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} factor={1} />
-      </div>
-      <div class="hidden md:block">
-        <Img {src} alt="" loading={i <= 1 ? 'eager' : 'lazy'} factor={0.91} />
-      </div>
+      <Img {src} alt="" loading={i <= 1 ? 'eager' : 'lazy'} />
     </div>
   {/each}
 </div>
