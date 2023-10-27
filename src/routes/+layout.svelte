@@ -1,22 +1,40 @@
 <script lang="ts">
   import '../app.css';
-  // import Lenis from '@studio-freight/lenis';
-  // import { onMount } from 'svelte';
+  import Lenis from '@studio-freight/lenis';
+  import { onMount } from 'svelte';
   import { showingTitle, nextPage, loaded } from '$lib/store';
-  // import { page } from '$app/stores';
-  // import { browser } from '$app/environment';
+  import { page } from '$app/stores';
+  import { browser } from '$app/environment';
   import PreviewTitle from '$lib/PreviewTitle.svelte';
   import Courtain from '$lib/Courtain.svelte';
   import Nav from '$lib/Nav.svelte';
   import { onNavigate } from '$app/navigation';
   import Footer from '$lib/Footer.svelte';
-  import { onMount } from 'svelte';
 
-  // let lenis: Lenis;
+  let lenis: Lenis;
 
   let curtainAppears = false;
   const duration = 1000;
   const delay = 180;
+
+  onMount(() => {
+    lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    let rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+    };
+  });
+
+  $: if (browser && $page.status && lenis) {
+    lenis.scrollTo(0, { immediate: true });
+  }
 
   onNavigate(({ from, to }) => {
     if (from?.route?.id === to?.route?.id) {
