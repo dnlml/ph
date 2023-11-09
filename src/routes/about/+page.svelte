@@ -4,7 +4,7 @@
 </script>
 
 <section class="grid md:grid-cols-2 min-h-[100dvh] gap-12 items-center md:-mt-28">
-  <div class="max-w-xl text-center justify-self-center md:justify-self-end">
+  <div class="max-w-xl justify-self-center md:justify-self-end">
     <p>
       Italian photographer based in Barcelona since 2014.
       <br />
