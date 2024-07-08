@@ -11,7 +11,7 @@
     }
   }
 
-  console.log(a);
+  console.log('Very usefull!', a);
 </script>
 
 <section class="grid md:grid-cols-2 min-h-[100dvh] gap-12 items-center md:-mt-28">
