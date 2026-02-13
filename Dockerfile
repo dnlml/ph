@@ -1,30 +1,8 @@
-# syntax=docker/dockerfile:1
+# Production-only Dockerfile
+# Build is done locally to avoid long image processing times
+# See DEPLOY.md for instructions
 
-# Build stage
-FROM node:22-alpine AS builder
-
-WORKDIR /app
-
-# Install pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
-
-# Copy package files
-COPY package.json pnpm-lock.yaml* ./
-
-# Install dependencies
-RUN pnpm install --frozen-lockfile
-
-# Copy source
-COPY . .
-
-# Build the app
-RUN pnpm build
-
-# Prune dev dependencies
-RUN pnpm prune --prod
-
-# Production stage
-FROM node:22-alpine AS runner
+FROM node:22-alpine
 
 WORKDIR /app
 
@@ -36,10 +14,10 @@ ENV PORT=3000
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 sveltekit
 
-# Copy built app
-COPY --from=builder --chown=sveltekit:nodejs /app/build ./build
-COPY --from=builder --chown=sveltekit:nodejs /app/node_modules ./node_modules
-COPY --from=builder --chown=sveltekit:nodejs /app/package.json ./
+# Copy pre-built app and dependencies
+COPY --chown=sveltekit:nodejs build ./build
+COPY --chown=sveltekit:nodejs node_modules ./node_modules
+COPY --chown=sveltekit:nodejs package.json ./
 
 USER sveltekit
 
