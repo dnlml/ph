@@ -92,6 +92,7 @@
         <Img class="mb-5" {src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
       </div>
 
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -- subtitles are hardcoded, safe content -->
       <p class="mt-3">{@html subtitles[i]}</p>
     </div>
   {/each}

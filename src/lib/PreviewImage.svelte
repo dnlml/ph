@@ -7,10 +7,10 @@
   export let alt: string;
   export let aspect: string;
   export let projectUrl: string;
-  export let title: string = '';
+  export let title = '';
 
-  export let imageClasses: string = '';
-  export let metaClasses: string = '';
+  export let imageClasses = '';
+  export let metaClasses = '';
 
   export let loading: 'eager' | 'lazy' = 'lazy';
 
@@ -37,7 +37,7 @@
     on:mouseleave={unsetTitle}
     on:click={unsetTitle}
   >
-    <Img class="h-full w-full" {src} factor={0.91} {alt} {loading} />
+    <Img class="h-full w-full" {...{ src, alt, loading }} factor={0.91} />
   </a>
 </div>
 
