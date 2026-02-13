@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: danielemeli-photo
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - ORIGIN=https://danielemeli.xyz
+    restart: unless-stopped
+    networks:
+      - caddy_default
+
+networks:
+  caddy_default:
+    external: true
